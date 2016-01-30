@@ -68,7 +68,8 @@ import com.cyanogen.lookup.phonenumber.response.LookupResponse;
 
 import java.util.List;
 
-import com.suda.cloud.phone.PhoneUtil;
+import com.sudamod.sdk.phonelocation.PhoneUtil;
+import com.sudamod.sdk.utils.LanguagesUtils;
 
 /**
  * The view for a single entry in a conversation list.
@@ -199,8 +200,8 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
 
     private void setPhoneLocation() {
         String number = mData.getOtherParticipantNormalizedDestination();
-        if (PhoneUtil.isZh(true)) {
-            mPhoneLocationView.setText(PhoneUtil.getPhoneUtil(mContext).getLocalNumberInfo(number));
+        if (LanguagesUtils.isZh(true)) {
+            mPhoneLocationView.setText(PhoneUtil.getPhoneUtil(mContext).getLocalNumberInfo(number,true));
         }
     }
 
