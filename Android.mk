@@ -90,7 +90,7 @@ ifeq ($(contacts_common_dir),)
   contacts_common_dir := ../ContactsCommon
 endif
 CONTACTS_COMMON_LOOKUP_PROVIDER ?= $(LOCAL_PATH)/$(contacts_common_dir)/info_lookup
-include $(CONTACTS_COMMON_LOOKUP_PROVIDER)/phonenumber_lookup_provider.mk
+include packages/apps/ContactsCommon/info_lookup/phonenumber_lookup_provider.mk
 
 LOCAL_PROGUARD_FLAGS := -ignorewarnings -include build/core/proguard_basic_keeps.flags
 
